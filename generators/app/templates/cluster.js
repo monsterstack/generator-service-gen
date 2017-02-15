@@ -3,6 +3,7 @@ const config = require('config');
 const Cluster = require('core-server').Cluster;
 
 const optimist = require('optimist');
+const _ = require('lodash');
 
 const main = () => {
   console.log("Starting Cluster");
