@@ -11,6 +11,11 @@ const main = () => {
   let announcement = require('./announcement.json');
   let typeQuery = require('./typeQuery.json');
 
+  if(optimist.argv.overrides) {
+    let overrides = require(optimist.argv.overrides);
+    _.merge(config, overrides);
+  }
+
   let discoveryHost = config.discovery.host;
 
   // Handle Arguments
